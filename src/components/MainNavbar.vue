@@ -15,6 +15,9 @@
       <div class="nav-button-container">
         <router-link to="/pesanan" class="nav-button" :class="{ 'active': currentRoute === '/pesanan' }">Pesanan</router-link>
       </div>
+      <div class="nav-button-container">
+        <router-link to="/login" class="nav-button">Login</router-link>
+      </div>
     </div>
   </header>
 </template>
@@ -39,77 +42,78 @@ export default {
   }
 };
 </script>
-  
-  <style scoped>
+
+<style scoped>
+.header {
+  background-color: #985E49;
+  padding: 10px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  color: #fff;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.el-text {
+  font-family: 'New Font', sans-serif;
+  font-size: 32px;
+  color: black;
+  margin-right: 5px;
+}
+
+.coffee-text {
+  font-family: 'New Font', sans-serif;
+  font-weight: normal;
+  font-size: 32px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-button-container {
+  padding: 10px;
+  margin-left: 10px;
+}
+
+.nav-button {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.nav-button.active {
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
   .header {
-    background-color: #985E49;
-    padding: 10px;
-    margin-bottom: 40px;
-    display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
   }
-  
-  .logo-container {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo {
-    color: #fff;
-    font-size: 24px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .el-text {
-    font-family: 'New Font', sans-serif;
-    font-size: 32px;
-    color: black;
-    margin-right: 5px;
-  }
-  
-  .coffee-text {
-    font-family: 'New Font', sans-serif;
-    font-weight: normal;
-    font-size: 32px;
-  }
-  
+
   .navigation {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    margin-top: 20px;
+    justify-content: center;
   }
-  
+
   .nav-button-container {
-    padding: 10px;
-    margin-left: 10px;
+    margin: 10px;
   }
-  
-  .nav-button {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  .nav-button.active {
-    font-weight: bold;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-  
-  @media (max-width: 768px) {
-    .header {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .navigation {
-      margin-top: 20px;
-      justify-content: center;
-    }
-  
-    .nav-button-container {
-      margin: 10px;
-    }
-  }
-  </style>
-  
+}
+</style>

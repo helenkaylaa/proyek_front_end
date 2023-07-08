@@ -50,6 +50,7 @@ export default {
 .pesanan-list-container {
   background-color: #f1f1f1;
   padding: 20px;
+  min-height: 91vh;
 }
 
 .content {
